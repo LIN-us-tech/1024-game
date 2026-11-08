@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>1024 · 草莓糖果铺</title>
+  <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+  <link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
+  <link href="https://fonts.loli.net/css2?family=Baloo+2:wght@500;700;800&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 樱花飘落装饰层 -->
+  <div class="sky" aria-hidden="true">
+    <span class="flake f1">❤</span>
+    <span class="flake f2">♡</span>
+    <span class="flake f3">✦</span>
+    <span class="flake f4">🎀</span>
+    <span class="flake f5">♡</span>
+    <span class="flake f6">❤</span>
+    <span class="flake f7">⋆</span>
+    <span class="flake f8">✦</span>
+    <span class="flake f9">♡</span>
+    <span class="flake f10">❤</span>
+  </div>
+
+  <main class="game">
+    <header class="masthead">
+      <div class="logo-wrap">
+        <span class="spark s1">✦</span>
+        <h1 class="logo">1024</h1>
+        <span class="spark s2">✦</span>
+      </div>
+      <p class="tagline">把甜甜的方块抱在一起 · 拼出 <b>1024</b> ♡</p>
+    </header>
+
+    <section class="hud">
+      <div class="scorebox">
+        <span class="lbl">糖果罐 · SCORE</span>
+        <b id="score">0</b>
+      </div>
+      <div class="scorebox best">
+        <span class="lbl">最佳纪录 · BEST</span>
+        <b id="best">0</b>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div class="seg" id="sizeSeg" role="group" aria-label="棋盘尺寸">
+        <button class="seg-btn active" data-size="4" type="button">4×4</button>
+        <button class="seg-btn" data-size="5" type="button">5×5</button>
+      </div>
+      <div class="ctrl-right">
+        <button class="btn" id="btnNew" type="button">♥ 新游戏</button>
+        <button class="btn icon" id="btnSound" type="button" title="音效开关">♪ ON</button>
+      </div>
+    </section>
+
+    <div class="board" id="board" data-n="4">
+      <div class="cells" id="cells" aria-hidden="true"></div>
+      <div class="tiles" id="tiles"></div>
+      <div class="overlay" id="overlay">
+        <div class="ov-title" id="ovTitle"></div>
+        <p class="ov-sub" id="ovSub"></p>
+        <div class="ov-btns">
+          <button class="btn" id="ovContinue" type="button">继续冒险 ♡</button>
+          <button class="btn" id="ovNew" type="button">再来一局</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="help">
+      <p>方向键 / WASD 移动 · 手机轻轻滑动 · 按 R 重开</p>
+      <p class="coin blink">★ 用爱意合并方块 · 1024 在等你哦 ★</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
